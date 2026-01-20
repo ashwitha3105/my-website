@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddartha Degree College | Armoor</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Poppins,Segoe UI,Arial,sans-serif;background:#f6f8fc;color:#2b2b2b}
+
+    header{background:#0a5c2f;color:#fff;padding:26px 40px}
+    header h1{margin:0;font-size:34px}
+    header p{margin-top:6px;font-style:italic}
+
+    nav{background:#083f21;box-shadow:0 4px 14px rgba(0,0,0,.15);display:flex;justify-content:center;gap:30px;padding:14px;position:sticky;top:0;z-index:10}
+    nav a{color:#fff;text-decoration:none;font-weight:500;position:relative}
+    nav a::after{content:"";position:absolute;width:0;height:2px;background:#fff;left:0;bottom:-5px;transition:.3s}
+    nav a:hover::after{width:100%}
+
+        /* HERO (NO IMAGES – TOP COLLEGE STYLE) */
+    .hero{height:70vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a5c2f,#138a4b)}
+    .hero-text{max-width:900px;text-align:center;color:#fff;padding:20px}
+    .hero-text h2{font-size:46px;margin-bottom:14px;letter-spacing:.5px}
+    .hero-text p{font-size:20px;opacity:.95}
+
+    .container{max-width:1100px;margin:auto;padding:80px 30px}
+
+    .section{margin-bottom:80px}
+    .section h3{font-size:28px;color:#0a5c2f;margin-bottom:20px}
+
+    /* ABOUT STORY */
+    .about-box{background:#fff;padding:35px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+
+    /* COURSES – TABS */
+    .tabs{display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap}
+    .tab{padding:10px 20px;border-radius:20px;border:1px solid #0a5c2f;cursor:pointer}
+    .tab.active{background:#0a5c2f;color:#fff}
+    .tab-content{display:none}
+    .tab-content.active{display:block}
+
+    .course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .course{background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+
+    /* DIRECTOR SPOTLIGHT */
+    .director{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center}
+    .director img{width:100%;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:14px;transition:.4s}
+    .gallery img:hover{transform:scale(1.08)}
+
+    /* CONTACT */
+    .contact{background:#0a5c2f;color:#fff;padding:50px;border-radius:18px}
+
+    footer{text-align:center;background:#083f21;color:#fff;padding:24px;font-size:14px;letter-spacing:.4px}
+
+    @media(max-width:768px){
+      .hero-text h2{font-size:28px}
+      .director{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+  <img src="logo.jpg" alt="Siddartha Degree College Logo" style="width:90px;background:#fff;border-radius:10px;padding:6px" />
+  <div>
+    <h1>SIDDARTHA DEGREE COLLEGE</h1>
+    <p>Humanity • Discipline • Education</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#courses">Courses</a>
+  <a href="#director">Leadership</a>
+  <a href="#gallery">Campus Life</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Siddartha Degree College</h2>
+    <p>Academic Excellence • Discipline • Student Success</p>
+    <div style="margin-top:34px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+      <a href="#about" style="padding:14px 36px;background:#fff;color:#0a5c2f;border-radius:30px;text-decoration:none;font-weight:700">About College</a>
+      <a href="#admissions" style="padding:14px 36px;border:2px solid #fff;color:#fff;border-radius:30px;text-decoration:none;font-weight:700">Admissions</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+<section id="about" class="section">
+  <h3>Our Story / మా కథ</h3>
+  <div class="about-box">
+    <p><strong>English:</strong> Siddartha Degree College is dedicated to academic excellence, discipline, and holistic student development.</p>
+    <p><strong>తెలుగు:</strong> సిద్ధార్థ డిగ్రీ కళాశాల విద్య, క్రమశిక్షణ మరియు విద్యార్థుల సర్వాంగ అభివృద్ధిని లక్ష్యంగా పెట్టుకొని పనిచేస్తోంది.</p>
+  </div>
+</section>
+
+<section id="courses" class="section">
+  <h3>Academic Programs</h3>
+  <div class="tabs">
+    <div class="tab active" onclick="showTab(0)">Science</div>
+    <div class="tab" onclick="showTab(1)">Commerce</div>
+    <div class="tab" onclick="showTab(2)">Arts</div>
+  </div>
+
+  <div class="tab-content active">
+    <div class="course-grid">
+      <div class="course">B.Sc (MPCs)</div>
+      <div class="course">B.Sc (MECs)</div>
+      <div class="course">B.Sc (BZC)</div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="course-grid">
+      <div class="course">B.Com (Computer Applications)</div>
+      <div class="course">B.Com (General)</div>
+    </div>
+  </div>
+
+  <div class="tab-content">
+    <div class="course-grid">
+      <div class="course">B.A (HEP – Telugu Medium)</div>
+    </div>
+  </div>
+</section>
+
+<section id="director" class="section">
+  <h3>Leadership Message</h3>
+  <div class="about-box">
+    <h4>D. Rajaram Yadav</h4>
+    <p><strong>Secretary & Correspondent</strong></p>
+    <p>"Our mission is to nurture disciplined, confident, and career-ready graduates through quality education and strong values."</p>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h3>Why Choose Siddartha</h3>
+  <div class="course-grid" style="margin-top:30px">
+    <div class="course">✔ Experienced Faculty</div>
+    <div class="course">✔ Strong Academic Discipline</div>
+    <div class="course">✔ Affordable Fee Structure</div>
+    <div class="course">✔ Career & Higher Studies Guidance</div>
+    <div class="course">✔ Safe & Student-Friendly Campus</div>
+    <div class="course">✔ Focus on Telugu & English Medium Support</div>
+  </div>
+</section>
+
+<section id="admissions" class="section">
+  <h3 style="margin-bottom:30px">Admissions & Contact</h3>
+  <div class="contact" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    <div>
+      <p><strong>Address:</strong><br>Backside of Bus Depot,<br>Near Srilatha Hospital,<br>Vidya Nagar, Armoor</p>
+      <p style="margin-top:15px"><strong>Phone:</strong><br>8142422221<br>9494738168<br>9948394784</p>
+      <iframe src="https://www.google.com/maps?q=Armoor%20Bus%20Depot&output=embed" width="100%" height="260" style="border:0;border-radius:12px;margin-top:20px" loading="lazy"></iframe>
+    </div>
+    <div>
+      <h4>Admission Enquiry</h4>
+      <form onsubmit="sendWhatsApp();return false;" style="display:grid;gap:14px;margin-top:15px">
+        <input id="name" type="text" placeholder="Student Name" required />
+        <input id="phone" type="tel" placeholder="Mobile Number" required />
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option>B.Sc</option>
+          <option>B.Com</option>
+          <option>B.A</option>
+        </select>
+        <button type="submit" style="padding:14px;border:none;border-radius:10px;background:#fff;color:#0a5c2f;font-weight:700;cursor:pointer">Send via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  © 2026 Siddartha Degree College, Armoor
+</footer>
+
+<script>
+  function showTab(i){
+    document.querySelectorAll('.tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+    document.querySelectorAll('.tab-content').forEach((c,idx)=>c.classList.toggle('active',idx===i));
+  }
+
+  function sendWhatsApp(){
+    var name=document.getElementById('name').value;
+    var phone=document.getElementById('phone').value;
+    var course=document.getElementById('course').value;
+    var msg=`Admission Enquiry%0AName: ${name}%0APhone: ${phone}%0ACourse: ${course}`;
+    window.open(`https://wa.me/918142422221?text=${msg}`,'_blank');
+  }
+</script>
+<a href="https://wa.me/918142422221" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 18px;border-radius:50px;font-weight:600;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.3)">WhatsApp</a>
+
+</body>
+</html>
